@@ -20,7 +20,11 @@ Este projeto implementa um monitoramento automatizado para o servidor Nginx em u
 - Crie o script `monitor_nginx.sh` no diretório `~/monitoramento_nginx`.
 - Adicione permissão de execução com `chmod +x`.
 
-### 5. Automatizar com Cron
+### 5. Configurar o Script de Monitoramento
+- Verificar o Log do Script de Monitoramento
+- `cat online.log` # Exibe o log de quando o Nginx estava online e `cat offline.log` # Exibe o log de quando o Nginx estava offline
+
+### 6. Automatizar com Cron
 - Edite o cron `crontab -e`.
 - No cron, agende o script para rodar a cada 5 minutos com `*/5 * * * * ~/monitoramento_nginx/monitor_nginx.sh`.
 
