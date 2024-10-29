@@ -21,6 +21,7 @@ Este projeto implementa um monitoramento automatizado para o servidor Nginx em u
 - Adicione permissão de execução com `chmod +x`.
 
 ### 5. Automatizar com Cron
+- Edite o cron `crontab -e
 - No cron, agende o script para rodar a cada 5 minutos com `*/5 * * * * ~/monitoramento_nginx/monitor_nginx.sh`.
 
 ## Versionamento
