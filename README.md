@@ -23,7 +23,12 @@ Este projeto implementa um monitoramento automatizado para o servidor Nginx em u
 
 ### 5. Configurar o Script de Monitoramento
 - Verificar o Log do Script de Monitoramento:
+<<<<<<< Updated upstream
 `cat online.log` Exibe o log de quando o Nginx esta online.`cat offline.log` Exibe o log de quando o Nginx esta offline
+=======
+`cat online.log` Exibe o log de quando o Nginx esta online;
+`cat offline.log` Exibe o log de quando o Nginx esta offline;
+>>>>>>> Stashed changes
 
 ### 6. Automatizar com Cron
 - Edite o cron `crontab -e`.
