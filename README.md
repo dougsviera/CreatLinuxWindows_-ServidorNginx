@@ -18,7 +18,8 @@ Este projeto implementa um monitoramento automatizado para o servidor Nginx em u
 
 ### 4. Configurar o Script de Monitoramento
 - Crie o script `monitor_nginx.sh` no diretório `~/monitoramento_nginx`.
-- Adicione permissão de execução com `chmod +x`.
+- Execute `mkdir monitoramento_nginx` e depois `vi monitor_nginx.sh`.
+- Adicione permissão de execução com `chmod +x monitor_nginx.sh`. 
 
 ### 5. Configurar o Script de Monitoramento
 - Verificar o Log do Script de Monitoramento:
@@ -39,4 +40,5 @@ Este projeto implementa um monitoramento automatizado para o servidor Nginx em u
 
 ## Logs
 - O status do serviço Nginx é registrado em `online.log` e `offline.log` no diretório `monitoramento_nginx`.
+
 
