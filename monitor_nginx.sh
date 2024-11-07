@@ -1,4 +1,4 @@
-#!/bin/bash
+nano ~/.gitconfig#!/bin/bash
 
 # Configurações
 DIRETORIO_SAIDA="$HOME/monitoramento_nginx"
