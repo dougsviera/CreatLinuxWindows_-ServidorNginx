@@ -1,41 +1,41 @@
-# Monitoramento do Servidor Nginx no WSL (Windows Subsystem for Linux)
+# Monitoring the Nginx Server in WSL (Windows Subsystem for Linux)
 
-Este projeto implementa um monitoramento automatizado para o servidor Nginx em uma instalação Ubuntu no Windows, utilizando o WSL (Windows Subsystem for Linux).
+This project implements an automated monitoring for the Nginx server in an Ubuntu installation on Windows, using WSL (Windows Subsystem for Linux).
 
-## Pré-requisitos
-- Windows 10/11 com WSL instalado e Ubuntu 20.04 ou superior.
-- Conexão ativa à internet para instalar pacotes.
+## Prerequisites
+- Windows 10/11 with WSL installed and Ubuntu 20.04 or higher.
+- Active Internet connection to install packages.
 
-## Etapas de Instalação
-### 1. Ativar o WSL
-- Execute `wsl --install` no PowerShell com permissões de administrador.
+## Installation Steps
+### 1. Enable WSL
+- Run 'wsl --install' in PowerShell with admin permissions.
 
-### 2. Instalar o Ubuntu 20.04 LTS ou superior
-- Baixe o Ubuntu pela Microsoft Store e conclua a configuração inicial.
+### 2. Install Ubuntu 20.04 LTS or higher
+- Download Ubuntu from the Microsoft Store and complete the initial setup.
 
-### 3. Instalar e configurar o Nginx
-- Execute `sudo apt update && sudo apt install nginx` e inicie o Nginx.
+### 3. Install and configure Nginx
+- Run 'sudo apt update & sudo apt install nginx' and launch Nginx.
 
-### 4. Configurar o Script de Monitoramento
-- Crie o script `monitor_nginx.sh` no diretório `~/monitoramento_nginx`.
-- Execute `mkdir monitoramento_nginx` e depois `vi monitor_nginx.sh`.
-- Adicione permissão de execução com `chmod +x monitor_nginx.sh`. 
-- Verificar o Log do Script de Monitoramento:
-    `cat online.log` Exibe o log de quando o Nginx esta online;
-    `cat offline.log` Exibe o log de quando o Nginx esta offline;
+### 4. Configure the Monitoring Script
+- Create the script 'monitor_nginx.sh' in the directory '~/monitoramento_nginx'.
+- Run 'mkdir monitoramento_nginx' and then 'saw monitor_nginx.sh'.
+- Add execute permission with 'chmod +x monitor_nginx.sh'. 
+- Check the Monitoring Script Log:
+    'cat online.log' Displays the log of when Nginx is online;
+    'cat offline.log' Displays the log of when Nginx is offline;
 
-### 5. Automatizar com Cron
-- Edite o cron `crontab -e`.
-- No cron, agende o script para rodar a cada 5 minutos com `*/5 * * * * ~/monitoramento_nginx/monitor_nginx.sh`.
+### 5. Automate with Cron
+- Eddie & Cron in 'Crontab'.
+- In cron, schedule the script to run every 5 minutes with '*/5 * * * * ~/monitoramento_nginx/monitor_nginx.sh'.
 
-## Versionamento
-- Inicie um repositório Git com `git init` e faça commits frequentes para versionar o código.
-- Opcional: Crie um repositório remoto no GitHub ou GitLab e faça o push do código.
+## Versioning
+- Start a Git repository with git init and make frequent commits to versioning the code.
+- Optional: Create a remote repository on GitHub or GitLab and push the code.
 
-## Teste
-- Pare o Nginx com `sudo systemctl stop nginx` para verificar se o script registra o status OFFLINE.
-- Reinicie o Nginx com `sudo systemctl start nginx` e verifique o status ONLINE.
+## Testing
+- Stop Nginx with 'sudo systemctl stop nginx' to check if the script registers OFFLINE status.
+- Restart Nginx with 'sudo systemctl start nginx' and check the ONLINE status.
 
 ## Logs
-- O status do serviço Nginx é registrado em `online.log` e `offline.log` no diretório `monitoramento_nginx`.
+- The status of the Nginx service is logged in 'online.log' and 'offline.log' in the 'monitoramento_nginx' directory.
 
